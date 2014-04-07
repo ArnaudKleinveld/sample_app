@@ -6,13 +6,17 @@ gem 'rails', '4.0.4'
 gem 'bootstrap-sass', '2.3.2.0'
 gem 'sprockets', '2.11.0'
 
-gem 'pg', '0.15.1'
 
 group :development, :test do
   gem 'rspec-rails', '2.13.1'
 end
 
+group :development do
+  gem 'sqlite3'
+end
+
 group :test do
+  gem 'pg', '0.15.1'
   gem 'selenium-webdriver', '2.35.1'
   gem 'capybara', '2.1.0'
 end
@@ -29,5 +33,6 @@ group :doc do
 end
 
 group :production do
+  gem 'pg', '0.15.1'
   gem 'rails_12factor', '0.0.2'
 end
